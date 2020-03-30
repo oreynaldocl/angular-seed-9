@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+// Overrides scss variables
+@import './scss/variables';
+
+// LIBRARIES
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./scss/font-awesome/font-awesome";
+
+// CUSTOM SCSS
+@import './scss/mixin';
+@import './scss/styles';

@@ -1,9 +1,9 @@
 // Overrides scss variables
 @import './scss/variables';
 
-// BOOTSTRAP CSS
-// @import "~bootstrap/dist/css/bootstrap.css";
+// LIBRARIES
 @import "~bootstrap/scss/bootstrap.scss";
+@import "./scss/font-awesome/font-awesome";
 
 // CUSTOM SCSS
 @import './scss/mixin';

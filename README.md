@@ -27,13 +27,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Creation
-```
+```sh
 ng new my-app --routing=true --style=scss
 ```
 
 ## Bootstrap files
 Install the following library
-```
+```sh
 npm install --save @ng-bootstrap/ng-bootstrap@6.0.2 bootstrap@4.4.1
 ```
 
@@ -46,11 +46,38 @@ Create the following files
         |- _styles.scss
 ```
 Add following lines in `src/styles.scss`
-```
-// BOOTSTRAP CSS
+```SCSS
+// LIBRARIES
 @import "~bootstrap/dist/css/bootstrap.css";
 
 // CUSTOM SCSS
 @import './scss/variables';
 @import './scss/styles';
+```
+
+## FontAwesome files
+Install font awesome library. 
+```sh
+npm install --save @fortawesome/fontawesome-free
+```
+Add following file with this content:
+```SCSS
+// Allows overriding Font Awesome variables https://github.com/FortAwesome/Font-Awesome/blob/master/web-fonts-with-css/scss/_variables.scss
+
+// For loadiong the Web Fonts based on an absolute route instead of a relative route
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+
+// Importing main Font Awesome scss library
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+// Importing Font Awesome Web Fonts
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+```
+Add following lines in `src/styles.scss`
+```SCSS
+// LIBRARIES
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./scss/font-awesome/font-awesome";
 ```

@@ -25,3 +25,32 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Creation
+```
+ng new my-app --routing=true --style=scss
+```
+
+## Bootstrap files
+Install the following library
+```
+npm install --save @ng-bootstrap/ng-bootstrap@6.0.2 bootstrap@4.4.1
+```
+
+Create the following files
+```
+|- src/
+    |- scss/
+        |- _variables.scss
+        |- _mixins.scss
+        |- _styles.scss
+```
+Add following lines in `src/styles.scss`
+```
+// BOOTSTRAP CSS
+@import "~bootstrap/dist/css/bootstrap.css";
+
+// CUSTOM SCSS
+@import './scss/variables';
+@import './scss/styles';
+```
